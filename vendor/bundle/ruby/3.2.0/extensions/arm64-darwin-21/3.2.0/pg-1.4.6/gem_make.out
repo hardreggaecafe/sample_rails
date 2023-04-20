@@ -2,8 +2,8 @@ current directory: /Users/takamizawanoriaki/sample_rails/vendor/bundle/ruby/3.2.
 /Users/takamizawanoriaki/.rbenv/versions/3.2.2/bin/ruby extconf.rb --with-pg-config\=/opt/homebrew/opt/postgresql@13/bin/postgres
 Calling libpq with GVL unlocked
 Using config values from /opt/homebrew/opt/postgresql@13/bin/postgres
-2023-04-19 23:39:29.860 GMT [60400] FATAL:  --includedir requires a value
-2023-04-19 23:39:29.865 GMT [60401] FATAL:  --libdir requires a value
+2023-04-20 08:13:50.799 GMT [91520] FATAL:  --includedir requires a value
+2023-04-20 08:13:50.805 GMT [91530] FATAL:  --libdir requires a value
 checking for whether -Wl,-rpath, is accepted as LDFLAGS... yes
 Using libpq from 
 checking for libpq-fe.h... no

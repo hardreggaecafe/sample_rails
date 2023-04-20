@@ -11,7 +11,9 @@ gem "rails", "7.0.4"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-#gem "pg", "~> 1.1"
+group :production do
+  gem 'pg', '1.1'
+end
 
 # SQLite
 gem 'sqlite3'
