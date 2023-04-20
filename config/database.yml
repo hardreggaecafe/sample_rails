@@ -88,7 +88,7 @@ production:
   database: <%= ENV["SAMPLE_RAILS_DATABASE"] %>
   username: <%= ENV["SAMPLE_RAILS_DATABASE_USERNAME"] %>
   password: <%= ENV["SAMPLE_RAILS_DATABASE_PASSWORD"] %>
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   pool: 5
