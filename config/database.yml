@@ -84,6 +84,13 @@ test:
 #
 production:
   <<: *default
-  database: sample_rails_production
-  username: sample_rails
+  host: <%= ENV["SAMPLE_RAILS_HOST"] %>
+  database: <%= ENV["SAMPLE_RAILS_DATABASE"] %>
+  username: <%= ENV["SAMPLE_RAILS_DATABASE_USERNAME"] %>
   password: <%= ENV["SAMPLE_RAILS_DATABASE_PASSWORD"] %>
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  charset: utf8
+  collation: utf8_general_ci
