@@ -15,6 +15,11 @@ group :production do
   gem 'pg', '1.1'
 end
 
+# Pry
+group :development do
+  gem 'pry-rails'
+end
+
 # SQLite
 gem 'sqlite3'
 
