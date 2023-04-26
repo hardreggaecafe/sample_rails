@@ -1,0 +1,30 @@
+<%= form_for @task, url: "/task" do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :duedate %>
+    <%= form.text_field :duedate %>
+  </div>
+
+  <div>
+    <%= form.label :label %>
+    <%= form.text_field :label %>   
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

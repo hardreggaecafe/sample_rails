@@ -20,6 +20,10 @@ group :development do
   gem 'pry-rails'
 end
 
+# Turbo
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
 # SQLite
 gem 'sqlite3'
 
