@@ -32,6 +32,17 @@ class TaskController < ApplicationController
       redirect_to new_task_path, flash: { error: '記事の変更に失敗しました' }
     end
   end
+
+  def destroy
+    task = Task.find(params[:id])
+
+    if task.destroy!
+      redirect_to task_path, notice: "削除しました", status: :see_other
+    else
+      redirect_to task_path, alert: "削除に失敗しました", status: :see_other
+    end
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :description, :status, :duedate, :label)
