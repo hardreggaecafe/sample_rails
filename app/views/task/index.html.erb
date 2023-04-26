@@ -17,6 +17,7 @@
         <td><%=t.status %></td>
         <td><%=t.duedate %></td>
         <td><%=t.label %></td>
+        <td><%= link_to 'Delete', task_path(t), data: { turbo_method: 'delete', turbo_confirm: '本当に消しますか？' } %></td>
         </tr>
       <% end %>
     </tbody>
