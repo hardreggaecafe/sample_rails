@@ -12,7 +12,7 @@ gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 group :production do
-  gem 'pg', '1.1'
+  gem 'pg'
 end
 
 # Pry
