@@ -19,4 +19,7 @@ module SampleRails
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
+
+  # Hosts
+    config.hosts << 'sample-rails.onrender.com'
 end
