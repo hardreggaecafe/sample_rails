@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @text = "<h1>Hello World</h1>"
-    @posts = Post.all
+    @text = "<h1>タスク管理ツール</h1>"
   end
 end
