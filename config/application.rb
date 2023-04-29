@@ -18,6 +18,9 @@ module SampleRails
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # TimeZome
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
     # Hosts
     config.hosts << 'sample-rails.onrender.com'
   end
