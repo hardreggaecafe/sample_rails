@@ -29,14 +29,14 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  app_name: "Task Management Tool"
+ja:
+  hello: "ハローワーク"
+  app_name: "タスク管理ツール"
   task:
-    name: "Task Name"
-    description: "Task Description"
-    status: "Task Status"
-    duedate: "Task Due"
-    label: "Task Label"
-    new: "New Task"
-    edit: "Task Edit"
+    name: "タスク名"
+    description: "タスク詳細"
+    status: "タスク状況"
+    duedate: "期限"
+    label: "タスクのラベル"
+    new: "新規タスク"
+    edit: "タスクの編集"
