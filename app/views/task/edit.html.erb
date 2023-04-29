@@ -1,26 +1,27 @@
+<h1><%= t "task.edit" %></h1>
 <%= form_for @task, url: task_path do |form| %>
   <div>
-    <%= form.label :name %>
+    <%= form.label :name, (t 'task.name') %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :description %>
+    <%= form.label :description, (t 'task.description') %>
     <%= form.text_field :description %>
   </div>
 
   <div>
-    <%= form.label :status %>
+    <%= form.label :status, (t 'task.status') %>
     <%= form.text_field :status %>
   </div>
 
   <div>
-    <%= form.label :duedate %>
+    <%= form.label :duedate, (t 'task.duedate') %>
     <%= form.text_field :duedate %>
   </div>
 
   <div>
-    <%= form.label :label %>
+    <%= form.label :label, (t "task.label") %>
     <%= form.text_field :label %>   
   </div>
 
@@ -28,3 +29,7 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<div>
+  <%= link_to "Back", task_index_path %>
+</div>
