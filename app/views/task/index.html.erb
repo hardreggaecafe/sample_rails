@@ -3,11 +3,12 @@
 <table>
     <thead>
       <tr>
-      <th>ID</th>
-      <th>NAME</th>
-      <th>STATUS</th>
-      <th>DUE</th>
-      <th>LABEL</th>
+      <th><%= sort_link(@q, :id, 'ID') %></th>
+      <th><%= sort_link(@q, :name, 'NAME') %></th>
+      <th><%= sort_link(@q, :status, 'STATUS') %></th>
+      <th><%= sort_link(@q, :duedate, 'DUE') %></th>
+      <th><%= sort_link(@q, :label, 'LABEL') %></th>
+      <th><%= sort_link(@q, :created_at, 'CREATED_AT') %></th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
         <td><%=t.status %></td>
         <td><%=t.duedate %></td>
         <td><%=t.label %></td>
+        <td><%=t.created_at.strftime('%Y/%m/%d %H:%M') %></td>
         <td><%= link_to 'Delete', task_path(t), data: { turbo_method: 'delete', turbo_confirm: '本当に消しますか？' } %></td>
         </tr>
       <% end %>
