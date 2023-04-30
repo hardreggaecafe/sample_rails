@@ -12,7 +12,7 @@
 
   <div>
     <%= form.label :status, (t 'task.status') %>
-    <%= form.text_field :status %>
+    <%= form.select :status, Task.statuses.keys.to_a, {}, class: 'form-control' %>
   </div>
 
   <div>
