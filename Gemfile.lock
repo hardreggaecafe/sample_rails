@@ -243,8 +243,8 @@ DEPENDENCIES
   pry-rails
   puma (~> 5.0)
   rails (= 7.0.4)
-  ransack
   rails-i18n
+  ransack
   selenium-webdriver
   sprockets-rails
   sqlite3
