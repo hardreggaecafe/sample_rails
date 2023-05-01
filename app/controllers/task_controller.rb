@@ -1,6 +1,7 @@
 class TaskController < ApplicationController
   def index
-    @tasks = Task.all.page(params[:page])
+    @q = Task.ransack(params[:q]).page(params[:page])
+    @tasks = @q.result(distinct: true)
   end
 
   def show

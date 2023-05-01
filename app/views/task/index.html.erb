@@ -1,23 +1,26 @@
 <h1>Tasks</h1>
-<p><a href='/task/new'>新規タスク</a></p>
+<p><%= link_to (t "task.new"), new_task_path %></p>
+<%= render 'search_form' %>
 <table>
     <thead>
       <tr>
-      <th>ID</th>
-      <th>NAME</th>
-      <th>STATUS</th>
-      <th>DUE</th>
-      <th>LABEL</th>
+      <th><%= sort_link(@q, :id, 'ID') %></th>
+      <th><%= sort_link(@q, :name, (t "task.name")) %></th>
+      <th><%= sort_link(@q, :status, (t "task.status")) %></th>
+      <th><%= sort_link(@q, :duedate, (t "task.duedate")) %></th>
+      <th><%= sort_link(@q, :label, (t "task.label")) %></th>
+      <th><%= sort_link(@q, :created_at, 'CREATED_AT') %></th>
       </tr>
     </thead>
     <tbody>
       <% @tasks.each do |t| %>
         <tr>
-        <td><%=t.id %></td>
-        <td><%=t.name %></td>
+        <td><%= link_to t.id, edit_task_path(t.id) %></td>
+        <td><%= link_to t.name, edit_task_path(t.id) %></td>
         <td><%=t.status %></td>
         <td><%=t.duedate %></td>
         <td><%=t.label %></td>
+        <td><%=t.created_at.strftime('%Y/%m/%d %H:%M') %></td>
         <td><%= link_to 'Delete', task_path(t), data: { turbo_method: 'delete', turbo_confirm: '本当に消しますか？' } %></td>
         </tr>
       <% end %>
