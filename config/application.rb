@@ -18,7 +18,17 @@ module SampleRails
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # TimeZome
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
     # Hosts
     config.hosts << 'sample-rails.onrender.com'
+
+    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # config.i18n.default_locale = :de
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja
+    I18n.available_locales = [:en, :ja]
   end
 end

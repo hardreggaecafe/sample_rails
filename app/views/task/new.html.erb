@@ -1,16 +1,18 @@
+<h1><%= t "task.new" %></h1>
 <%= form_for @task, url: "/task" do |form| %>
   <div>
-    <%= form.label :name, class: "my-0 mr-md-auto font-weight-normal" %>
+
+    <%= form.label :name, (t 'task.name') , class: "my-0 mr-md-auto font-weight-normal" %>
     <%= form.text_field :name,  class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :description, class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.label :description, (t 'task.description'), class: "my-0 mr-md-auto font-weight-normal" %>
     <%= form.text_field :description,  class: "form-control"%>
   </div>
 
   <div>
-    <%= form.label :status, class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.label :status, (t 'task.status'), class: "my-0 mr-md-auto font-weight-normal" %>
     <%= form.text_field :status,  class: "form-control" %>
   </div>
 
@@ -20,8 +22,9 @@
   </div>
 
   <div>
-    <%= form.label :label, class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.label :label, (t "task.label"), class: "my-0 mr-md-auto font-weight-normal" %>
     <%= form.text_field :label,  class: "form-control" %>   
+
   </div>
 
   <div>
