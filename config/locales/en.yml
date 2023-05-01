@@ -31,3 +31,12 @@
 
 en:
   hello: "Hello world"
+  app_name: "Task Management Tool"
+  task:
+    name: "Task Name"
+    description: "Task Description"
+    status: "Task Status"
+    duedate: "Task Due"
+    label: "Task Label"
+    new: "New Task"
+    edit: "Task Edit"

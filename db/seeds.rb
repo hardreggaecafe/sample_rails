@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-if Task.count == 0
-  5.times do |n|
+if Task.count <= 10
+  100000.times do |n|
     Task.create!(
-      name: "タスク名#{n + 1}",
-      description: "#{n + 1}度頑張る",
-      status: "on schedule",
-      duedate: "2023/4/30",
-      label: "red"
+      name: "タスク名#{n + 10}",
+      description: "#{n + 10}度頑張る",
+      status: rand(0..5),
+      duedate: "2023/#{rand(5..12)}/#{rand(1..25)}",
+      label: ["red", "blue", "green"][rand(0..2)]
     )
   end
 end
