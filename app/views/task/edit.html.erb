@@ -1,30 +1,30 @@
 <%= form_for @task, url: task_path do |form| %>
-  <div>
+  <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name,  class: "form-control" %>
   </div>
 
-  <div>
+  <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description,  class: "form-control" %>
   </div>
 
-  <div>
+  <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.text_field :status,  class: "form-control" %>
   </div>
 
-  <div>
+  <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :duedate %>
-    <%= form.text_field :duedate %>
+    <%= form.text_field :duedate,  class: "form-control" %>
   </div>
 
-  <div>
+  <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :label %>
-    <%= form.text_field :label %>   
+    <%= form.text_field :label,  class: "form-control" %>   
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="btn btn-outline-primary">
+    <%= form.submit nil, class: "btn btn-primary" %>
   </div>
 <% end %>
