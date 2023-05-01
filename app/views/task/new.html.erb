@@ -1,31 +1,33 @@
 <h1><%= t "task.new" %></h1>
 <%= form_for @task, url: "/task" do |form| %>
   <div>
-    <%= form.label :name, (t 'task.name') %>
-    <%= form.text_field :name %>
+
+    <%= form.label :name, (t 'task.name') , class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.text_field :name,  class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :description, (t 'task.description') %>
-    <%= form.text_field :description %>
+    <%= form.label :description, (t 'task.description'), class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.text_field :description,  class: "form-control"%>
   </div>
 
   <div>
-    <%= form.label :status, (t 'task.status') %>
-    <%= form.select :status, Task.statuses.keys.to_a, {}, class: 'form-control' %>
+    <%= form.label :status, (t 'task.status'), class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.text_field :status,  class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :duedate, (t 'task.duedate') %>
-    <%= form.text_field :duedate %>
+    <%= form.label :duedate, class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.text_field :duedate,  class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :label, (t "task.label") %>
-    <%= form.text_field :label %>   
+    <%= form.label :label, (t "task.label"), class: "my-0 mr-md-auto font-weight-normal" %>
+    <%= form.text_field :label,  class: "form-control" %>   
+
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit nil, class: "btn btn-primary" %>
   </div>
 <% end %>
