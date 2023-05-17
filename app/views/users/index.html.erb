@@ -1,0 +1,24 @@
+<h1>Users</h1>
+<p><%= link_to (t "user.new"), new_user_path %></p>
+<table>
+    <thead>
+      <tr>
+      <th><%= t "user.id" %></th>
+      <th><%= t "user.email" %></th>
+      <th><%= t "user.role" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |u| %>
+        <tr>
+        <td><%= link_to u.id, edit_user_path(u.id) %></td>
+        <td><%= link_to u.email, edit_user_path(u.id) %></td>
+        <td><%= u.role %></td>
+        <td><%= u.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+        <td><%= button_to 'Delete', user_path(u), method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
+
+<%= paginate @users %>

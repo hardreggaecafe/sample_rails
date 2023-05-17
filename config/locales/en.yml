@@ -40,3 +40,8 @@ en:
     label: "Task Label"
     new: "New Task"
     edit: "Task Edit"
+  user:
+    email: "MailAddress"
+    role: "Role"
+    new: "Create New User"
+    edit: "Edit User"

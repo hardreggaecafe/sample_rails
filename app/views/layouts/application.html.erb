@@ -18,6 +18,9 @@
           <% if user_signed_in? %>
             <strong><%= link_to current_user.email, pages_show_path %></strong>
             <%= link_to 'プロフィール変更', edit_user_registration_path %>
+            <% if current_user.admin? %>
+              <%= link_to 'ユーザ管理', users_path %>
+            <% end %>
             <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to 'サインアップ', new_user_registration_path %>
@@ -25,10 +28,12 @@
           <% end %>
         </nav>
     </header>
-    <% if flash[:alert] %>
-      <div class="alert alert-primary" role="alert">
-        <%= notice %>
-      </div>
+    <% if flash[:alert] || flash[:danger] %>
+      <% flash.each do |key, value| %>
+         <p class="alert alert-<%= key %>">
+           <%= value %>
+         </p>
+      <% end %>
     <% end %>
     <% if flash[:notice] %>
       <div class="alert alert-primary" role="alert">
