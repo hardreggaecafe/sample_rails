@@ -12,6 +12,9 @@ gem 'rails-i18n'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Devise
+gem "devise"
+
 # Use postgresql as the database for Active Record
 group :production do
   gem 'pg'

@@ -38,9 +38,9 @@ class TaskController < ApplicationController
     task = Task.find(params[:id])
 
     if task.destroy!
-      redirect_to task_path, notice: "削除しました", status: :see_other
+      redirect_to task_index_path, notice: "削除しました"
     else
-      redirect_to task_path, alert: "削除に失敗しました", status: :see_other
+      redirect_to task_index_path, alert: "削除に失敗しました"
     end
   end
 
