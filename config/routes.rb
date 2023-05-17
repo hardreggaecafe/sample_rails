@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get '/', to: 'home#index'
   resources :task
+
+  get '*path', controller: 'application', action: 'render_404'
 end
