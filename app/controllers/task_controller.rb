@@ -1,6 +1,8 @@
 class TaskController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @q = Task.ransack(params[:q])
+    @q = Task.my_tasks(current_user).ransack(params[:q])
     @tasks = @q.result(distinct: true).page(params[:page])
   end
 
@@ -46,6 +48,6 @@ class TaskController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :description, :status, :duedate, :label)
+    params.require(:task).permit(:name, :description, :status, :user_id, :duedate, :label)
   end
 end

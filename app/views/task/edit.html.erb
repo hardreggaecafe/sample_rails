@@ -13,12 +13,12 @@
 
   <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :status, (t 'task.status')  %>
-    <%= form.text_field :status,  class: "form-control" %>
+    <%= form.select :status, Task.statuses.keys.map { |k| [t("enum.task.status.#{k}"), k] },  class: "form-control" %>
   </div>
 
   <div class="my-0 mr-md-auto font-weight-normal">
     <%= form.label :duedate, (t 'task.duedate') %>
-    <%= form.text_field :duedate,  class: "form-control" %>
+    <%= form.date_field :duedate,  class: "form-control" %>
   </div>
 
   <div class="my-0 mr-md-auto font-weight-normal">

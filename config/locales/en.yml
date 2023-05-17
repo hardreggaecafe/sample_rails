@@ -43,5 +43,6 @@ en:
   user:
     email: "MailAddress"
     role: "Role"
+    tasks: "Num of Tasks"
     new: "Create New User"
     edit: "Edit User"

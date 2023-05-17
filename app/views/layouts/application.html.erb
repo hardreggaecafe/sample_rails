@@ -18,6 +18,7 @@
           <% if user_signed_in? %>
             <strong><%= link_to current_user.email, pages_show_path %></strong>
             <%= link_to 'プロフィール変更', edit_user_registration_path %>
+            <%= link_to 'タスク管理', task_index_path %>
             <% if current_user.admin? %>
               <%= link_to 'ユーザ管理', users_path %>
             <% end %>
