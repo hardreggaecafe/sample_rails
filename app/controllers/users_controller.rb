@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :chk_admin
 
   def index
-    @users = User.all.page(params[:page])
+    @users = User.all.eager_load(:tasks).page(params[:page])
   end
 
   def show

@@ -13,19 +13,20 @@
 
   <div>
     <%= form.label :status, (t 'task.status'), class: "my-0 mr-md-auto font-weight-normal" %>
-    <%= form.text_field :status,  class: "form-control" %>
+    <%= form.select :status, Task.statuses.keys.map { |k| [t("enum.task.status.#{k}"), k] },  class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :duedate, class: "my-0 mr-md-auto font-weight-normal" %>
-    <%= form.text_field :duedate,  class: "form-control" %>
+    <%= form.date_field :duedate,  class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :label, (t "task.label"), class: "my-0 mr-md-auto font-weight-normal" %>
     <%= form.text_field :label,  class: "form-control" %>   
-
   </div>
+
+  <%= form.hidden_field :user_id, :value => current_user.id %>
 
   <div>
     <%= form.submit nil, class: "btn btn-primary" %>
