@@ -22,7 +22,7 @@ end
 
 # Pry
 group :development do
-  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 # Turbo
