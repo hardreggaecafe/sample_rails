@@ -67,13 +67,13 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => ENV['SAMPLE_APP_EMAIL_ADDR'],
-    :port => 587,
-    :domain => ENV['SAMPLE_APP_EMAIL_DOMAIN'],
-    :user_name => ENV['SAMPLE_APP_EMAIL_USER'],
+    :user_name => 'apikey',
     :password => ENV['SAMPLE_APP_EMAIL_PASSWD'],
-    :authentication => 'plain',
+    :domain => ENV['SAMPLE_APP_EMAIL_DOMAIN'],
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
