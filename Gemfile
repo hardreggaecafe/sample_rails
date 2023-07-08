@@ -17,7 +17,7 @@ gem "devise"
 
 # Use postgresql as the database for Active Record
 group :production do
-  gem 'mysql2', '>= 0.4.4'
+  gem 'mysql2'
 end
 
 # Pry
