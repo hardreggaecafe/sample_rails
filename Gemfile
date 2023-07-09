@@ -68,7 +68,7 @@ gem "bootsnap", require: false
 # Bootstrap
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'bootstrap-sass', '3.4.0'
+gem 'bootstrap-sass', '3.3.6'
 
 # Kaminari
 gem 'kaminari'
