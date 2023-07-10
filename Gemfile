@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.0.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "7.0.4"
@@ -17,7 +17,7 @@ gem "devise"
 
 # Use postgresql as the database for Active Record
 group :production do
-  gem 'pg'
+  gem 'mysql2'
 end
 
 # Pry
@@ -33,16 +33,16 @@ gem "stimulus-rails"
 gem 'sqlite3'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma", "6.3.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+#gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+#gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+#gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -68,7 +68,7 @@ gem "bootsnap", require: false
 # Bootstrap
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.3.6'
 
 # Kaminari
 gem 'kaminari'
@@ -80,7 +80,7 @@ gem 'sass-rails'
 # gem "image_processing", "~> 1.2"
 
 # Ransack
-gem 'ransack'
+#gem 'ransack'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

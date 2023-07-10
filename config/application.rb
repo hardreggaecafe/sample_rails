@@ -23,6 +23,8 @@ module SampleRails
     config.active_record.default_timezone = :local
     # Hosts
     config.hosts << 'sample-rails.onrender.com'
+    config.hosts << '54.64.70.164'
+    config.hosts << 'samplerails071009-env.eba-ephe2yr9.ap-northeast-1.elasticbeanstalk.com'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
